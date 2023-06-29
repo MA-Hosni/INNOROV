@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNOROV</title>
+  <link rel="shortcut icon" href="img/log.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-color-primary text-color-white tracking-wider">
+  <header class="sticky top-0 z-50">
+    <nav class="container flex justify-between items-center">
+      <div class="py-5 text-color-secondary font-bold text-3xl">
+        <a href="#home" class="flex items-center">
+          <img class="h-16 pr-2 hidden lg:block" src="img/logo.png" alt="" />
+          <span class="text-color-white">INNO</span>ROV
+        </a>
+      </div>
+      <div>
+        <ul class="hidden lg:flex items-center space-x-6">
+          <li>
+            <a href="#home" class="hover:text-color-secondary smooth-scroll-link">Home</a>
+          </li>
+          <li>
+            <a href="#features" class="hover:text-color-secondary smooth-scroll-link">Features</a>
+          </li>
+          <li>
+            <a href="#aboutus" class="hover:text-color-secondary smooth-scroll-link">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-color-secondary">Contact</a>
+          </li>
+
+          <li>
+            <button onclick="rakhle()" class="bouton">Pre order</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile screen  -->
+      <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+        <ul class="h-full grid place-items-center py-20">
+          <li>
+            <a id="hLink" href="#home" class="hover:text-color-secondary smooth-scroll-link">Home</a>
+          </li>
+          <li>
+            <a id="hLink" href="#features" class="hover:text-color-secondary smooth-scroll-link">Features</a>
+          </li>
+          <li>
+            <a id="hLink" href="#aboutus" class="hover:text-color-secondary smooth-scroll-link">About Us</a>
+          </li>
+          <li>
+            <a id="hLink" href="contact.html" class="hover:text-color-secondary">Contact</a>
+          </li>
+
+          <li>
+            <button onclick="rakhle()" class="bouton">Pre order</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="relative">
+      <div class="blob1"></div>
+
+      <div class="blob2"></div>
+
+      <div class="container py-20">
+        <div class="flex flex-col items-center z-20 md:flex-row">
+          <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+            <h1 class="title mb-4">
+              The Ocean Looks Better Through INNOROV.
+            </h1>
+            <p class="leading-relaxed mb-10">
+              Unfolding revolutionary technologies for aquaculture, fulfilling
+              underwater tasks and assuring accessibility to any subaquatic
+              field without Risking the divers lives
+            </p>
+            <button id="learnMoreBtn" type="button" class="btn">
+              LEARN MORE
+              <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="md:w-1/2">
+            <img src="./img/Isometric_Fish_Farm__Producing_Trout-removebg-preview.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="bg-color-primary-light">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">What we do!</h4>
+          <h4 class="subtitle">
+            Diving into the Future of Aquaculture with our AI-Powered Robotics
+          </h4>
+        </div>
+
+        <div class="flex min-h-3/4 items-center justify-center">
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+              <!-- ------card 1------- -->
+              <div class="h-96 w-auto">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="img/robot1-removebg-preview.png" alt="" />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+              </div>
+              <div
+                class="absolute inset-5 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 id="car-tit1" class="text-3xl font-bold text-white">
+                  All In One Solution
+                </h1>
+                <p
+                  class="mb-3 text-md italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  INNOROV's products include many features and tools combined
+                  in one single solution, therefore our clients would not need
+                  to buy many products to control their underwater assets.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+              <!-- ------card 2------- -->
+              <div class="h-96 w-auto">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="img/live-removebg-preview.png" alt="" />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+              </div>
+              <div
+                class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 id="car-tit2" class="text-3xl font-bold text-white">
+                  Real Time Streaming
+                </h1>
+                <p
+                  class="mb-3 text-md italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  Since our ROV is remotely operated by human being, the
+                  operator has a real time stream in his screen where he can
+                  follow our ROV step by step into accomplishing all the
+                  tasks, in the same screen, our users can find other features
+                  like: Temperature, Dissolved oxygen and also water current.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+              <!-- ------card 3------- -->
+              <div class="h-96 w-auto">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="img/dashboard-4439194-3726403.png" alt="" />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+              </div>
+              <div
+                class="absolute inset-5 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 id="car-tit" class="text-3xl font-bold text-white">
+                  DataBase Dashboard
+                </h1>
+                <p
+                  class="mb-3 text-md italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  Data about the fish's biomass is important to our clients.
+                  That is why, INNOROV provides a database dashboard where our
+                  clients can find their biomass calculus registered, each
+                  time they run processing algorithms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutus">
+      <div class="container py-20 relative">
+        <div class="blob1"></div>
+
+        <div class="blob2"></div>
+
+        <div class="flex flex-col gap-4 items-center justify-between md:flex-row">
+          <div id="element" class="mb-12">
+            <img src="./img/Capture d'écran 2023-06-21 224735.png" />
+          </div>
+          <div class="text-center md:text-left md:w-1/2 md:ml-20">
+            <div class="font-bold text-color-secondary mb-4 flex items-center">
+              <i class="fa-solid fa-water pr-2"></i>
+              <h4>About Us</h4>
+            </div>
+            <h1 class="title mb-4">
+              Exploring Aquaculture's Future with INNOROV!
+            </h1>
+            <p class="leading-relaxed mb-10">
+              INNOROV solves subaquatic problems in offshore aquaculture,
+              using Artificial Intelligence implemented in underwater robots.
+            </p>
+            <button id="read" class="btn block">Read More</button>
+          </div>
+          <div class="text-center md:text-left md:w-1/2 md:mr-20">
+            <p id="para" class="hidden leading-relaxed my-10">
+              Our mission is to transform the aquaculture sector by offering
+              cutting-edge technological solutions to the problems associated
+              with effective and sustainable fish farming. We enable fish
+              farmers to make informed decisions, optimize feed management,
+              and ultimately boost their yields while decreasing waste and
+              environmental impact due to our software and user-friendly
+              interface. Our objective is to develop a viable and sustainable
+              future for aquaculture and help provide wholesome, sustainable
+              fish for a growing global population.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonial">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">So, who are we?</h4>
+          <h1 class="title">Dive Deeper To Meet The Team</h1>
+        </div>
+
+        <!-- review container  -->
+        <div class="mt-8">
+          <div class="flex items-center justify-center flex-wrap">
+            <img src="./img/user1.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic"
+              onclick="showReview()" />
+            <img src="./img/user2.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"
+              onclick="showReview()" />
+            <img src="./img/user3.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"
+              onclick="showReview()" />
+            <img src="./img/user4.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"
+              onclick="showReview()" />
+            <img src="./img/user5.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"
+              onclick="showReview()" />
+            <img src="./img/user6.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic"
+              onclick="showReview()" />
+          </div>
+
+          <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+            <div class="user-text active-text">
+              <p class="md:text-2xl mb-6">
+                Ahsen wehed fik ya korea lchamaliya wl janoubiya khater
+                lahkika manfarakch binethom juste ye3jbouni lebnet l asians!
+              </p>
+              <h4 class="font-bold text-color-secondary mb-1">Kim Jong Un</h4>
+              <p>CEO & Co-Founder</p>
+            </div>
+
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">
+                kim kardashian mahich mezyena lezem nekbloha lehkeya hedhi w
+                zid kahloucha so that is -1 okhra w kanye maalem khatrou yheb
+                yafdha7 lconspiracy taa illuminati ama nheb nwalli member
+                maahom lahkika kalek kol lila sahreyet w jaw
+              </p>
+              <h4 class="font-bold text-color-secondary mb-1">Kanye West</h4>
+              <p>CBO & Co-Founder</p>
+            </div>
+
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">
+                Maghir manrakzou fi putin khater naarech esmou theshom rwessa
+                ay wehed yetwled dima esmou youfa bl ov putinov mohamadov(esmi
+                bl russi)
+              </p>
+              <h4 class="font-bold text-color-secondary mb-1">Putin</h4>
+              <p>CIO & Co-Founder</p>
+            </div>
+
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">
+                bon chkouni ena chnahki al maalem li wasel amarikya lel majd
+                mte3ha baad matkhaltet bl mexicans wl khalech wl hnoud hawka
+                tared ness lkol keka youfa racism 3leh kolyoum 3ark w ma3rouk
+                w ehtijejet al racism binet laabed
+              </p>
+              <h4 class="font-bold text-color-secondary mb-1">
+                Donald Trump
+              </h4>
+              <p>CTO & Co-Founder</p>
+            </div>
+
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">
+                kerkeny dhaher tkoul chbih ray marketing sehel barcha andou
+                3000 follower al insta
+              </p>
+              <h4 class="font-bold text-color-secondary mb-1">Rayen Neji</h4>
+              <p>Marketing Manager</p>
+            </div>
+
+            <div class="user-text">
+              <p class="md:text-2xl mb-6">"What color is your bugatti"!</p>
+              <h4 class="font-bold text-color-secondary mb-1">Andrew Tate</h4>
+              <p>Top G</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-color-primary-light">
+      <div class="container py-20">
+        <div class="text-center m-auto mb-20 md:w-1/2">
+          <h4 class="font-bold text-color-secondary mb-4">INNOROV Journey</h4>
+          <h1 class="title">Our Achievements</h1>
+        </div>
+
+        <!-- ============== QUALIFICATION 1 ============== -->
+        <div class="qualification_data">
+          <div class="container rounded-2xl border-x border-color-white">
+            <h3 class="title2">THE BIRTH OF THE IDEA</h3>
+            <p class="text-xs lg:text-base leading-relaxed mb-10 capitalize">Our first victory came when we played first in both the national and arab mate ROV competitions. this was the initial spark that incited the idea of pursuing this opportunity and incorporating it into our start-up</p>
+            <div class="font-bold text-color-secondary my-4 flex items-center">
+              <i class="fa-solid fa-calendar pr-2"></i>
+              2018
+            </div>
+          </div>
+
+          <div>
+            <span class="qualification_rounder"></span>
+            <span class="qualification_line"></span>
+          </div>
+        </div>
+        <!-- ============== QUALIFICATION 2 ============== -->
+        <div class="qualification_data">
+          <div></div>
+
+          <div>
+            <span class="qualification_rounder"></span>
+            <span class="qualification_line"></span>
+          </div>
+
+          <div class="container rounded-2xl border-x border-color-white">
+            <h3 class="title2">REPRESENTING TUNISIA IN USA</h3>
+            <p class="text-xs lg:text-base leading-relaxed mb-10 capitalize">after winning our first title. the
+              adventure got us to the USA
+              to fierce challenge. we were capable of demonstrating our
+              abilities by joining the international mate ROV competition
+              after competing against a variety groups from around the
+              world</p>
+            <div class="font-bold text-color-secondary my-4 flex items-center">
+              <i class="fa-solid fa-calendar pr-2"></i>
+              2019
+            </div>
+          </div>
+        </div>
+        <!-- ============== QUALIFICATION 3 ============== -->
+        <div class="qualification_data">
+          <div class="container rounded-2xl border-x border-color-white">
+            <h3 class="title2">ACHIEVING OUR MVP</h3>
+            <p class="text-xs lg:text-base leading-relaxed mb-10 capitalize">Our startup began to take shape this
+              year as we finally decided
+              to pursue our dream. we began working on the concept of our
+              startup and joined forces to contribute to the idea. By that
+              stage, we had completed our second prototype.</p>
+            <div class="font-bold text-color-secondary my-4 flex items-center">
+              <i class="fa-solid fa-calendar pr-2"></i>
+              2021
+            </div>
+          </div>
+
+          <div>
+            <span class="qualification_rounder"></span>
+            <span class="qualification_line"></span>
+          </div>
+        </div>
+        <!-- ============== QUALIFICATION 4 ============== -->
+        <div class="qualification_data">
+          <div></div>
+
+          <div>
+            <span class="qualification_rounder"></span>
+            <!-- <span class="qualification_line"></span> -->
+          </div>
+
+          <div class="container rounded-2xl border-x border-color-white">
+            <h3 class="title2">STARTUP LAUNCH</h3>
+            <p class="text-xs lg:text-base leading-relaxed mb-10 capitalize">INNOROV took part in a variety of
+              entrepeneurial programs. we
+              were able to secure more victories and promote our concept. as a
+              result, we decided that it was the ideal moment to launch
+              INNOROV as a new company, and we finally inaugrated our
+              startup.</p>
+            <div class="font-bold text-color-secondary my-4 flex items-center">
+              <i class="fa-solid fa-calendar pr-2"></i>
+              2022
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="bg-color-primary-dark relative">
+        <div class="container py-10">
+          <div class="grid gap-10 md:grid-cols-3 pb-10">
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">About INNOROV</h4>
+              <p class="leading-relaxed">
+                We Develop Product As A Source Of Total Control For Underwater
+                Activities.
+              </p>
+              <div class="flex gap-5 items-center">
+                <p>Follow Us</p>
+                <i class="fa-brands fa-linkedin cursor-pointer hover:text-color-secondary"></i>
+              </div>
+            </div>
+            <div class="flex justify-between md:justify-around">
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Quick Links</h4>
+                <ul class="space-y-3">
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#features">Features</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#aboutus">About us</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#">Testimonial</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#">Blog</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Help</h4>
+                <ul class="space-y-3">
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#aboutus">About Us</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#features">Partners</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#">Career</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#">Reviews</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="#">Terms & Conditions</a>
+                  </li>
+                  <li class="underline hover:no-underline hover:text-color-secondary">
+                    <a href="contact.html">Help</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <h4 class="font-bold text-lg">Newsletter</h4>
+              <p class="leading-relaxed">
+                Subscribe With Email And Loads Of News Will Be Sent To You
+              </p>
+              <div class="flex items-center">
+                <input type="text"
+                  class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none"
+                  placeholder="Enter Your Email" />
+
+                <button type="submit"
+                  class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center pt-10 border-t border-color-gray">
+            <p>2023 &copy; INNOROV. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
