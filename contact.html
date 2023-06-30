@@ -1,235 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INNOROV</title>
+    <link rel="shortcut icon" href="img/log.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INNOROV</title>
-  <link rel="shortcut icon" href="img/log.png" type="image/x-icon" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body class="bg-color-primary text-color-white tracking-wider">
-  <header class="sticky top-0 z-50">
-    <nav class="container flex justify-between items-center">
-      <div class="py-5 text-color-secondary font-bold text-3xl">
-        <a href="index.html#home" class="flex items-center">
-          <img class="h-16 pr-2 hidden lg:block" src="img/logo.png" alt="" />
-          <span class="text-color-white">INNO</span>ROV
-        </a>
-      </div>
-      <div>
-        <ul class="hidden lg:flex items-center space-x-6">
-          <li>
-            <a href="index.html#" class="hover:text-color-secondary smooth-scroll-link">Home</a>
-          </li>
-          <li>
-            <a href="index.html#features" class="hover:text-color-secondary smooth-scroll-link">Features</a>
-          </li>
-          <li>
-            <a href="index.html#aboutus" class="hover:text-color-secondary smooth-scroll-link">About Us</a>
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-color-secondary smooth-scroll-link">Contact</a>
-          </li>
-
-          <li>
-            <button onclick="rakhle()" class="bouton">Pre order</button>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Mobile screen  -->
-      <div id="hamburger" class="lg:hidden cursor-pointer z-50">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-      <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
-        <ul class="h-full grid place-items-center py-20">
-          <li>
-            <a id="hLink" href="index.html#" class="hover:text-color-secondary smooth-scroll-link">Home</a>
-          </li>
-          <li>
-            <a id="hLink" href="index.html#features" class="hover:text-color-secondary smooth-scroll-link">Features</a>
-          </li>
-          <li>
-            <a id="hLink" href="index.html#aboutus" class="hover:text-color-secondary smooth-scroll-link">About Us</a>
-          </li>
-          <li>
-            <a id="hLink" href="#contact" class="hover:text-color-secondary smooth-scroll-link">Contact</a>
-          </li>
-
-          <li>
-            <button onclick="rakhle()" class="bouton">Pre order</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section id="contact">
-      <div class="container py-20">
-        <div class="flex items-center justify-evenly flex-col md:flex-row">
-          <div class="text-start m-auto mb-20 md:w-1/2">
-            <h4 class="font-bold text-color-secondary mb-4">Need Help?</h4>
-            <h1 class="title">Contact Us!</h1>
-            <br />
-            <ul class="space-y-3">
-              <li>
-                <i class="fa-solid fa-envelope text-xl pr-2"></i><a
-                  class="underline hover:no-underline hover:text-color-secondary"
-                  href="mailto:contact@innorov.com">contact@innorov.com</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone text-xl pr-2"></i><a
-                  class="underline hover:no-underline hover:text-color-secondary" href="tel:+216 51 370 302">+216 51 370
-                  302</a>
-              </li>
-            </ul>
-          </div>
-          <div class="text-center space-y-3 m-auto mb-20 md:w-1/2">
-            <p title="rue omar kaddeh immeuble le montplaisir 2eme etage B25 avenue kheireddine pacha 1073 montplaisir tunisie, montplaisir, tunis 1073, TN"
-              class="hover:text-color-secondary">
-              <i class="fa-sharp fa-solid fa-location-dot text-xl pr-2 hover:text-color-secondary"></i>Reach us in this
-              location
-            </p>
-            <iframe class="container"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2222.6618787691505!2d10.187750591000258!3d36.82181269246132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd348b8536707f%3A0x249fdbb540618d9c!2sAv.%20Kheireddine%20Pacha%2C%20Tunis!5e1!3m2!1sfr!2stn!4v1687348653429!5m2!1sfr!2stn"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+  <body class="bg-color-primary text-color-white tracking-wider">
+    <header class="sticky top-0 z-50">
+      <nav class="container flex justify-between items-center">
+        <div class="py-5 text-color-secondary font-bold text-3xl">
+          <a href="index.html#home" class="flex items-center">
+            <img class="h-16 pr-2 hidden lg:block" src="img/logo.png" alt="" />
+            <span class="text-color-white">INNO</span>ROV
+          </a>
         </div>
-        <hr class="py-4" />
-        <div id="getintouch" class="text-center m-auto mb-20 md:w-1/2">
-          <h4 class="font-bold text-color-secondary mb-4">
-            Have A Questation
-          </h4>
-          <h1 class="title">Get In Touch</h1>
+        <div>
+          <ul class="hidden lg:flex items-center space-x-6">
+            <li>
+              <a
+                href="index.html#"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#features"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#aboutus"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >Contact</a
+              >
+            </li>
+
+            <li>
+              <button onclick="rakhle()" class="bouton">Pre order</button>
+            </li>
+          </ul>
         </div>
-        <form action="https://formspree.io/f/xrgwzowb" method="POST">
-          <div class="w-full m-auto text-center md:w-2/3">
-            <div class="text-color-primary-dark grid gap-6 mb-6 md:grid-cols-2">
-              <input type="text"
-                class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                placeholder="Name" name="Full&nbsp;Name" required />
 
-              <input type="email"
-                class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                placeholder="Email" name="Email" required />
+        <!-- Mobile screen  -->
+        <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+          <i class="fa-solid fa-bars"></i>
+        </div>
 
-              <input type="tel"
-                class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                placeholder="Phone" name="Phone&nbsp;Number" required/>
+        <div
+          id="menu"
+          class="hidden bg-color-primary-dark h-[100vh] absolute inset-0"
+        >
+          <ul class="h-full grid place-items-center py-20">
+            <li>
+              <a
+                id="hLink"
+                href="index.html#"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                id="hLink"
+                href="index.html#features"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                id="hLink"
+                href="index.html#aboutus"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                id="hLink"
+                href="#contact"
+                class="hover:text-color-secondary smooth-scroll-link"
+                >Contact</a
+              >
+            </li>
 
-              <input type="text"
-                class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-                placeholder="Company" name="Company"/>
+            <li>
+              <button onclick="rakhle()" class="bouton">Pre order</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="contact">
+        <div class="container py-20">
+          <div class="flex items-center justify-evenly flex-col md:flex-row">
+            <div class="text-start m-auto mb-20 md:w-1/2">
+              <h4 class="font-bold text-color-secondary mb-4">Need Help?</h4>
+              <h1 class="title">Contact Us!</h1>
+              <br />
+              <ul class="space-y-3">
+                <li>
+                  <i class="fa-solid fa-envelope text-xl pr-2"></i
+                  ><a
+                    class="underline hover:no-underline hover:text-color-secondary"
+                    href="mailto:contact@innorov.com"
+                    >contact@innorov.com</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone text-xl pr-2"></i
+                  ><a
+                    class="underline hover:no-underline hover:text-color-secondary"
+                    href="tel:+216 51 370 302"
+                    >+216 51 370 302</a
+                  >
+                </li>
+              </ul>
             </div>
-
-            <textarea rows="4"
-              class="text-color-primary-dark bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
-              placeholder="How can we help you?" name="The&nbsp;Message" required></textarea>
-
-            <button class="btn mt-10" type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section id="footer">
-      <div class="bg-color-primary-dark relative">
-        <div class="container py-10">
-          <div class="grid gap-10 md:grid-cols-3 pb-10">
-            <div class="space-y-6">
-              <h4 class="font-bold text-lg">About INNOROV</h4>
-              <p class="leading-relaxed">
-                We Develop Product As A Source Of Total Control For Underwater
-                Activities.
+            <div class="text-center space-y-3 m-auto mb-20 md:w-1/2">
+              <p
+                title="rue omar kaddeh immeuble le montplaisir 2eme etage B25 avenue kheireddine pacha 1073 montplaisir tunisie, montplaisir, tunis 1073, TN"
+                class="hover:text-color-secondary"
+              >
+                <i
+                  class="fa-sharp fa-solid fa-location-dot text-xl pr-2 hover:text-color-secondary"
+                ></i
+                >Reach us in this location
               </p>
-              <div class="flex gap-5 items-center">
-                <p>Follow Us</p>
-                <a href="https://www.linkedin.com/company/innorov/"><i class="fa-brands fa-linkedin cursor-pointer hover:text-color-secondary"></i></a>
-              </div>
-            </div>
-            <div class="flex justify-between md:justify-around">
-              <div class="space-y-6">
-                <h4 class="font-bold text-lg">Quick Links</h4>
-                <ul class="space-y-3">
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="index.html#">Home</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="index.html#features">Features</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="index.html#aboutus">About us</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#">Testimonial</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#">Blog</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="space-y-6">
-                <h4 class="font-bold text-lg">Help</h4>
-                <ul class="space-y-3">
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="index.html#aboutus">About Us</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#">Partners</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#">Career</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#">Reviews</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#">Terms & Conditions</a>
-                  </li>
-                  <li class="underline hover:no-underline hover:text-color-secondary">
-                    <a href="#getintouch">Help</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="space-y-6">
-              <h4 class="font-bold text-lg">Newsletter</h4>
-              <p class="leading-relaxed">
-                Subscribe With Email And Loads Of News Will Be Sent To You
-              </p>
-              <div class="flex items-center">
-                <input type="text"
-                  class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none"
-                  placeholder="Enter Your Email" />
-
-                <button type="submit"
-                  class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90">
-                  <i class="fa-solid fa-paper-plane"></i>
-                </button>
-              </div>
+              <iframe
+                class="container"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2222.6618787691505!2d10.187750591000258!3d36.82181269246132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd348b8536707f%3A0x249fdbb540618d9c!2sAv.%20Kheireddine%20Pacha%2C%20Tunis!5e1!3m2!1sfr!2stn!4v1687348653429!5m2!1sfr!2stn"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
+          <hr class="py-4" />
+          <div id="getintouch" class="text-center m-auto mb-20 md:w-1/2">
+            <h4 class="font-bold text-color-secondary mb-4">
+              Have A Questation
+            </h4>
+            <h1 class="title">Get In Touch</h1>
+          </div>
+          <form onsubmit="sendEmail(); reset(); return false;">
+            <div class="w-full m-auto text-center md:w-2/3">
+              <div
+                class="text-color-primary-dark grid gap-6 mb-6 md:grid-cols-2"
+              >
+                <input
+                  type="text"
+                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+                  placeholder="Name"
+                  id="Full Name"
+                  required
+                />
 
-          <div class="flex justify-center pt-10 border-t border-color-gray">
-            <p>2023 &copy; INNOROV. All Rights Reserved.</p>
+                <input
+                  type="email"
+                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+                  placeholder="Email"
+                  id="Email"
+                  required
+                />
+
+                <input
+                  type="tel"
+                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+                  placeholder="Phone"
+                  id="Phone Number"
+                  required
+                />
+
+                <input
+                  type="text"
+                  class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+                  placeholder="Company"
+                  id="Company"
+                />
+              </div>
+
+              <textarea
+                rows="4"
+                class="text-color-primary-dark bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
+                placeholder="How can we help you?"
+                id="Message"
+                required
+              ></textarea>
+
+              <button class="btn mt-10" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="footer">
+        <div class="bg-color-primary-dark relative">
+          <div class="container py-10">
+            <div class="grid gap-10 md:grid-cols-3 pb-10">
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">About INNOROV</h4>
+                <p class="leading-relaxed">
+                  We Develop Product As A Source Of Total Control For Underwater
+                  Activities.
+                </p>
+                <div class="flex gap-5 items-center">
+                  <p>Follow Us</p>
+                  <a href="https://www.linkedin.com/company/innorov/"
+                    ><i
+                      class="fa-brands fa-linkedin cursor-pointer hover:text-color-secondary"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+              <div class="flex justify-between md:justify-around">
+                <div class="space-y-6">
+                  <h4 class="font-bold text-lg">Quick Links</h4>
+                  <ul class="space-y-3">
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="index.html#">Home</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="index.html#features">Features</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="index.html#aboutus">About us</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#">Testimonial</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#">Blog</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="space-y-6">
+                  <h4 class="font-bold text-lg">Help</h4>
+                  <ul class="space-y-3">
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="index.html#aboutus">About Us</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#">Partners</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#">Career</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#">Reviews</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#">Terms & Conditions</a>
+                    </li>
+                    <li
+                      class="underline hover:no-underline hover:text-color-secondary"
+                    >
+                      <a href="#getintouch">Help</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="space-y-6">
+                <h4 class="font-bold text-lg">Newsletter</h4>
+                <p class="leading-relaxed">
+                  Subscribe With Email And Loads Of News Will Be Sent To You
+                </p>
+                <div class="flex items-center">
+                  <input
+                    type="text"
+                    class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none"
+                    placeholder="Enter Your Email"
+                  />
+
+                  <button
+                    type="submit"
+                    class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center pt-10 border-t border-color-gray">
+              <p>2023 &copy; INNOROV. All Rights Reserved.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          SecureToken: "f00f3677-b268-4b28-bd5e-94269930123d",
+          To: "mohamedalihosni25@gmail.com",
+          From: "mohamedalihosni25@gmail.com",
+          Subject: "contact form",
+          Body: "name: " + document.getElementById("Full Name").value
+          + "<br> Email: " + document.getElementById("Email").value
+          + "<br> Phone Number: " + document.getElementById("Phone Number").value
+          + "<br> Company: " + document.getElementById("Company").value
+          + "<br> Message: " + document.getElementById("Message").value
+        }).then(message => alert("message sent succesfully"));
+      }
+    </script>
+  </body>
 </html>
