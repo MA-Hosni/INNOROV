@@ -169,7 +169,7 @@
 
   @media screen and (max-width: 462px) {
     .qualification_data {
-      column-gap: 0.5rem;
+      column-gap: 0rem;
     }
   }
   
