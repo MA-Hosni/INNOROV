@@ -165,7 +165,7 @@
             </h4>
             <h1 class="title">Get In Touch</h1>
           </div>
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form>
             <div class="w-full m-auto text-center md:w-2/3">
               <div
                 class="text-color-primary-dark grid gap-6 mb-6 md:grid-cols-2"
@@ -174,7 +174,7 @@
                   type="text"
                   class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
                   placeholder="Name"
-                  id="Full Name"
+                  name="Full Name"
                   required
                 />
 
@@ -182,7 +182,7 @@
                   type="email"
                   class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
                   placeholder="Email"
-                  id="Email"
+                  name="Email"
                   required
                 />
 
@@ -190,7 +190,7 @@
                   type="tel"
                   class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
                   placeholder="Phone"
-                  id="Phone Number"
+                  name="Phone Number"
                   required
                 />
 
@@ -198,7 +198,7 @@
                   type="text"
                   class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
                   placeholder="Company"
-                  id="Company"
+                  name="Company"
                 />
               </div>
 
@@ -206,7 +206,7 @@
                 rows="4"
                 class="text-color-primary-dark bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-3 focus:outline-none focus:border-color-secondary"
                 placeholder="How can we help you?"
-                id="Message"
+                name="Message"
                 required
               ></textarea>
 
@@ -313,20 +313,24 @@
                 <p class="leading-relaxed">
                   Subscribe With Email And Loads Of News Will Be Sent To You
                 </p>
-                <div class="flex items-center">
-                  <input
-                    type="text"
-                    class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none"
-                    placeholder="Enter Your Email"
-                  />
-
-                  <button
-                    type="submit"
-                    class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90"
-                  >
-                    <i class="fa-solid fa-paper-plane"></i>
-                  </button>
-                </div>
+                <form name="submit-to-google-sheet">
+                  <div class="flex items-center">
+                    <input
+                      type="text"
+                      class="w-3/4 text-color-gray bg-color-white p-2 lg:p-3 rounded-l-md focus:outline-none"
+                      placeholder="Enter Your Email"
+                      name="subscriptionEmail"
+                    />
+  
+                    <button
+                      type="submit"
+                      class="bg-color-secondary px-4 py-2 lg:px-5 lg:py-3 rounded-r-md hover:opacity-90"
+                    >
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </form>
+                <span id="msg" class="text-xs text-color-secondary m-4"></span>
               </div>
             </div>
 
@@ -339,21 +343,23 @@
     </main>
 
     <script src="script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-      function sendEmail() {
-        Email.send({
-          SecureToken: "f00f3677-b268-4b28-bd5e-94269930123d",
-          To: "mohamedalihosni25@gmail.com",
-          From: "mohamedalihosni25@gmail.com",
-          Subject: "contact form",
-          Body: "name: " + document.getElementById("Full Name").value
-          + "<br> Email: " + document.getElementById("Email").value
-          + "<br> Phone Number: " + document.getElementById("Phone Number").value
-          + "<br> Company: " + document.getElementById("Company").value
-          + "<br> Message: " + document.getElementById("Message").value
-        }).then(message => alert("message sent succesfully"));
-      }
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz_z-PqLzdbhdXMfT3oj3tjhbsQt6MWorUD_N0AwDy136mr2I8n0oZYpFVzSwo5mury/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Thank you for Subscribing!"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
